@@ -40,10 +40,17 @@ internal func exerciseOne() {
      <email address> or call their cell at <cell phone number>."
      
      */
+    let lastName = userData["results"][0]["name"]["last"].stringValue
+    let streetName = userData["results"][0]["location"]["street"].stringValue
+    let city = userData["results"][0]["location"]["city"].stringValue
+    let state = userData["results"][0]["location"]["state"].stringValue
+    let zipcode = userData["results"][0]["location"]["postcode"].intValue
+    let country = userData["results"][0]["nat"].stringValue
+    let title = userData["results"][0]["name"]["title"].stringValue
+    let emailAddress = userData["results"][0]["email"].stringValue
+    let cellPhoneNumber = userData["results"][0]["cell"].stringValue
     
-    
-    
-    
+    print ("\(firstName) \(lastName) lives at \(streetName) in \(city), \(state), \(zipcode) and is a resident of \(country). If you want to contact them, you can email \(title) \(firstName) at \(emailAddress) or call their cell at \(cellPhoneNumber).")
     
 }
 
